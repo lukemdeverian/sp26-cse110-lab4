@@ -131,8 +131,8 @@
 - Boolean(2) returns true since any non-zero number is truthy. true === true is true.
 
 ## 15. Difference between == and ===
-- == is loose equality — it converts both values to the same type before comparing.
-- === is strict equality — it compares both value AND type, no conversion.
+- == is loose equality. It converts both values to the same type before comparing.
+- === is strict equality. It compares both value AND type, no conversion.
 - Example: 2 == '2' is true, but 2 === '2' is false.
 ## 17. What will modifyArray([1,2,3], doSething) return?
 - The function returns [2, 4, 6]
