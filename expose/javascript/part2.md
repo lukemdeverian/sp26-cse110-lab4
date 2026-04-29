@@ -70,3 +70,84 @@
 
 ### E. Access index zero in the array of the courseLoad property of the student object
 - student.courseLoad[0] // 'CSE 110'
+## 13. Arithmetic
+
+### A. '3' + 2
+- Output: '32'
+- This is because of string concatenation.
+
+### B. '3' - 2
+- Output: 1
+- '3' is converted to a number, so it becomes subtraction.
+
+### C. 3 + null
+- Output: 3
+- null converted to 0, so 3 + 0 = 3.
+
+### D. '3' + null
+- Output: '3null'
+- null converts to the string 'null', so it becomes string concatenation.
+
+### E. true + 3
+- Output: 4
+- true converts to 1, so 1 + 3 = 4.
+
+### F. false + null
+- Output: 0
+- false converts to 0 and null converts to 0, so 0 + 0 = 0.
+
+### G. '3' + undefined
+- Output: '3undefined'
+- undefined converts to the string 'undefined', so it becomes string concatenation.
+
+### H. '3' - undefined
+- Output: NaN
+- undefined converts to NaN, and any arithmetic with NaN returns NaN.
+
+## 14. Comparison
+
+### A. '2' > 1
+- Output: true
+- '2' is converted to a number, so 2 > 1 is true.
+
+### B. '2' < '12'
+- Output: false
+- Both are strings so JS compares alphabetically. '2' > '1' alphabetically, so it returns false.
+
+### C. 2 == '2'
+- Output: true
+- == uses loose equality, so '2' is converted to a number and 2 == 2 is true.
+
+### D. 2 === '2'
+- Output: false
+- === uses strict equality, no type conversion. 2 (number) is not the same as '2' (string).
+
+### E. true == 2
+- Output: false
+- true converts to 1, and 1 == 2 is false.
+
+### F. true === Boolean(2)
+- Output: true
+- Boolean(2) returns true since any non-zero number is truthy. true === true is true.
+
+## 15. Difference between == and ===
+- == is loose equality — it converts both values to the same type before comparing.
+- === is strict equality — it compares both value AND type, no conversion.
+- Example: 2 == '2' is true, but 2 === '2' is false.
+## 17. What will modifyArray([1,2,3], doSething) return?
+- The function returns [2, 4, 6]
+- modifyArray loops through [1, 2, 3] and calls doSomething on each element
+- doSomething multiplies each element by 2:
+  - 1 * 2 = 2
+  - 2 * 2 = 4
+  - 3 * 2 = 6
+- Each result is pushed into newArr
+- Line 6 returns [2, 4, 6]
+## 19. What is the output of the above code?
+- Output in order: 1, 4, 3, 2
+- console.log(1) runs immediately
+- setTimeout with 1000ms is scheduled, so 2 is delayed by 1 second
+- setTimeout with 0ms is scheduled, so 3 is delayed but waits for the current code to finish
+- console.log(4) runs immediately after 1
+- Once the main code finishes, 3 prints
+- Finally, 2 prints after 1 second
